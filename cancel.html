@@ -1,0 +1,267 @@
+<!DOCTYPE html> 
+<meta charset="UTF-8">
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
+<title>Cancellation Page</title>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+    }
+    body{
+        background-image: url("images/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+        overflow: hidden;
+    }
+    div{
+        display:flex ;
+        justify-content: space-between;
+    }
+    .fa-desktop{
+          font-size: 36rem;
+          background: -webkit-linear-gradient(#eee,#485460, #151d25,#d2dae2);
+          -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+   
+    video{
+        position: relative;
+        top:-37rem;
+        left:2rem;
+        
+    }
+    .heading{
+       
+        padding-left: 10rem;
+        margin-top: 2rem;
+        font-family: 'Ceviche One', cursive;
+          
+    }
+
+  
+    .note{
+        margin:13rem 0rem;
+    }
+    .pre{
+        position: relative;
+        top:-40rem;
+        left:2rem;
+        font-size:2rem ;
+        font-weight: 700;
+        font-family: 'Candal', sans-serif;
+        color: #DAE0E2;
+        text-shadow: 2px 2px 5px #010a09;
+        width:34.4rem;
+        text-align: center;
+        background-image: linear-gradient(-45deg,#006266,#218F76,#1BCA9B);
+    }
+    .back{
+        position: relative;
+        top:-35rem;
+        left:52rem;
+        font-size:2rem ;
+        font-weight: 700;
+    
+    }
+    .back a{
+    padding: 1rem 1rem;
+       color:#fff;
+       border-radius: 10px;
+        text-decoration: none;
+        background-image: linear-gradient(-60deg,#0A3D62,#99AAAB,#DAE0E2);
+        box-shadow: 2px 3px 8px rgba(255,255,255,0.5);
+    }
+/*Media query For Laptops*/
+     @media screen and (max-width: 1024px){
+         body{
+            overflow-y:visible;
+         }
+     
+         div{
+        display:inline ;
+        
+            }
+
+            video{
+
+        top:-48.9rem;
+        left:2rem;
+        
+               }
+       
+         .pre{
+        position: relative;
+        top:-52.2rem;
+        left:2rem;
+        font-size:2rem ;
+    }
+     
+
+     
+    .back{
+        
+        top:-20rem;
+        left:1rem;
+    
+    }
+     
+    .back a{
+        padding:1rem 11rem;
+        border-radius: 4px;
+        background-image: linear-gradient(-60deg,#0A3D62,#0A79DF,#DAE0E2);
+        box-shadow: 2px 5px 8px rgba(255,255,255,0.6);
+    }
+
+     
+     
+         }/*  Laptop Media Query Ending */
+
+
+   /*Media query For Tablets*/      
+     @media screen and (max-width:768px){
+            
+
+        video{
+       
+        top:-53rem;
+        left:2rem;
+
+       }
+
+        .pre{
+
+        top:-56.5rem;
+        left:2rem;
+
+    }
+        .back a{
+        padding:1rem 1rem;
+       
+    }
+
+     }
+     /*  Tablet Media Query Ending */
+
+
+      /*Media query For  Moblie*/
+@media screen and (max-width:425px ){
+    body{
+        overflow-x: hidden;
+    }
+
+    video{
+       
+       top:-49.5rem;
+       left:1.7rem;
+       width: 23.3rem;
+
+      }
+
+      .fa-desktop{
+          font-size: 25rem;
+    }
+
+  .pre{
+    top:-55.4rem;
+    left:1.7rem;
+    width: 23.3rem;
+    font-size: 1.5rem;
+ }
+
+
+   .back{
+    
+        width: 20rem;
+   }
+}
+     /*  Moblie Media Query Ending */
+
+ /*Media query For Moblie */
+@media screen and (max-width:375px){
+    
+    video{
+       
+       top:-53.5rem;
+       left:1.7rem;
+
+      }
+
+  .pre{
+
+ top:-59.5rem;
+ left:1.7rem;
+
+   }
+   .back{
+       
+        font-size:1.4rem ;
+        font-weight: 500;
+    
+    } 
+}
+
+     /*  Moblie Media Query Ending */
+
+ /*Media query For Moblie */
+@media screen and (max-width:320px){
+    video{
+       
+       top:-57.7rem;
+       left:1.7rem;
+
+      }
+
+  .pre{
+
+ top:-63.5rem;
+ left:1.7rem;
+
+   }
+}
+     /*  Moblie Media Query Ending */
+
+
+</style>
+</head>
+<body>
+    <!-- This Website May Contain Some Bugs -->
+    <div>
+    <i class="fa fa-desktop" aria-hidden="true"></i>
+    <h2 class="heading" >Please Use A Desktop To View This Website Properly <br> <span class="fa" id="link"></span>
+     <br><span class="note">Note:This Website is not meant for moblies or tablets</span></h2>
+   
+</div>
+
+<div>
+    <video id="myVideo" width="550" height="350" autoplay loop muted>
+        <source src="cancel.mp4" type ="video/mp4">
+    </video>
+   
+</div>
+<p class="pre"><i class="fa fa-video-camera" aria-hidden="true"></i> Website Preview</p>
+<p class="back"> <a href="index.html"><i class="fa fa-undo" aria-hidden="true"></i> Go Back Anyway</a></p>
+
+<script>
+    //Function For Link or Chain Breaking Effect
+    function linking(){
+        let link = document.getElementById("link");
+        link.innerHTML ="&#xf0c1;";
+        link.style.fontSize ="100px";
+        link.style.color ="#7CEC9F";
+  //Timeout For The Chain Effect
+    setTimeout(function(){
+      link.innerHTML = "&#xf127;";
+      link.style.color ="#FF3E4D";
+    },1000);
+}
+    linking(); //Calling the Function
+    setInterval(linking, 2000);
+//For Autoplaying The Video
+    document.getElementById("myVideo").autoplay;
+</script>
+</body>
+</html>
