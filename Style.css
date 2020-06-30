@@ -1503,8 +1503,9 @@ outline: none;
     color: #fff;
     padding-top: 10px;
 }
-
+/* 
 /*This Media Query Is Useless,Just Ignore It */
+/*
 @media screen and (max-width:1024px){
 
     .slide-show {
@@ -1616,7 +1617,7 @@ outline: none;
   padding-bottom: 3rem;
 }
 
-}
+*/
 /*
 ------------------Media Query Section (Which is Pretty Useless) ---------------------------- */
 
